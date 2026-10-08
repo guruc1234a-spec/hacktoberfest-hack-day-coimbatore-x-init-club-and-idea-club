@@ -1,0 +1,82 @@
+[
+  {
+    "id": "saved-look-001",
+    "title": "Gemma Radiant Velvet Autumn",
+    "look": {
+      "id": "look-2-recommended",
+      "name": "Gemma Harmonized Radiant Aura",
+      "intensity": 7,
+      "reasoning": "Dual-tone pairing: mirrors secondary accent #D9A566 with terracotta cheek contouring and berry lips against #801235 velvet.",
+      "makeup": {
+        "eyes": "Sculpted gold bronze cut crease with a crisp winged cat-eye accent.",
+        "cheeks": "Duo-contour using terracotta bronzer topped with luminous liquid rose quartz highlighter.",
+        "lips": "Satin berry velvet lip with defined Cupid's bow contouring."
+      },
+      "products": [
+        "lip-001",
+        "eye-001",
+        "eye-002",
+        "chk-001",
+        "chk-002"
+      ],
+      "tutorial_steps": [
+        {
+          "step": 1,
+          "title": "Cheekbone Sculpt & Glow",
+          "instruction": "Sweep blush along cheekbone apex, layering liquid pearl on the top crest.",
+          "face_region": "cheekbone",
+          "technique": "sculpt_and_blend",
+          "estimated_time_sec": 60,
+          "pro_tip": "Keep 2 finger widths away from nose."
+        },
+        {
+          "step": 2,
+          "title": "Bronze Eyeshadow Dimension",
+          "instruction": "Sweep warm gold bronze across eyelid crease and outer corner.",
+          "face_region": "eyelid",
+          "technique": "circular_crease_buff",
+          "estimated_time_sec": 90,
+          "pro_tip": "Blend in small circular motions."
+        },
+        {
+          "step": 3,
+          "title": "Precision Winged Eyeliner",
+          "instruction": "Glide micro-felt tip from inner corner outward, creating a 45-degree wing.",
+          "face_region": "eyeliner",
+          "technique": "flick_and_connect",
+          "estimated_time_sec": 75,
+          "pro_tip": "Keep eyes open looking straight ahead."
+        },
+        {
+          "step": 4,
+          "title": "Velvet Berry Lips",
+          "instruction": "Define Cupid\u2019s bow precisely and glide rich berry pigment across lips.",
+          "face_region": "lips",
+          "technique": "precision_fill",
+          "estimated_time_sec": 45,
+          "pro_tip": "Use bullet tip for razor edges."
+        }
+      ]
+    },
+    "outfit_attributes": {
+      "dominant_color": "#801235",
+      "secondary_color": "#d9a566",
+      "style": "Traditional",
+      "formality": "Black Tie",
+      "palette": [
+        "#801235",
+        "#d9a566",
+        "#1a1618"
+      ]
+    },
+    "face_profile": {
+      "face_shape": "Oval",
+      "skin_tone": "Medium / Beige",
+      "skin_undertone": "Warm (Golden / Peachy)",
+      "skin_hex": "#e0af87"
+    },
+    "occasion": "Wedding Reception / Formal Evening",
+    "created_at": "2026-10-08T08:28:23.025728+00:00",
+    "notes": "Perfect match for the maroon saree with golden zari embroidery."
+  }
+]

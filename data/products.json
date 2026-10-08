@@ -1,0 +1,101 @@
+[
+  {
+    "id": "lip-001",
+    "name": "Velvet Satin Berry Lipstick",
+    "category": "lipstick",
+    "shade_family": "berry",
+    "price": 499,
+    "brand": "GlamSync Local",
+    "finish": "Satin",
+    "hex": "#801235",
+    "description": "Rich berry pigmentation infused with nourishing vitamin E."
+  },
+  {
+    "id": "lip-002",
+    "name": "Nude Rose Matte Lipstick",
+    "category": "lipstick",
+    "shade_family": "nude_rose",
+    "price": 650,
+    "brand": "GlamSync Local",
+    "finish": "Matte",
+    "hex": "#c47e7d",
+    "description": "Long-wearing warm nude rose formulation that flatters every skin tone."
+  },
+  {
+    "id": "lip-003",
+    "name": "Crimson Royale Bold Lip Lacquer",
+    "category": "lipstick",
+    "shade_family": "ruby_red",
+    "price": 750,
+    "brand": "GlamSync Local",
+    "finish": "High Gloss",
+    "hex": "#9e1327",
+    "description": "Vibrant showstopper red with mirror glass shine."
+  },
+  {
+    "id": "eye-001",
+    "name": "Bronze Gold Eyeshadow Palette",
+    "category": "eyeshadow",
+    "shade_family": "gold_bronze",
+    "price": 899,
+    "brand": "GlamSync Local",
+    "finish": "Metallic & Matte",
+    "hex": "#b38747",
+    "description": "9-pan warm champagne, copper, and deep molten bronze shadows."
+  },
+  {
+    "id": "eye-002",
+    "name": "Precision Winged Eyeliner Pen",
+    "category": "eyeliner",
+    "shade_family": "black",
+    "price": 350,
+    "brand": "GlamSync Local",
+    "finish": "Ultra Matte",
+    "hex": "#111111",
+    "description": "0.1mm micro-felt tip for sharp, sweatproof cat-eyes."
+  },
+  {
+    "id": "eye-003",
+    "name": "Sunset Smokey Kohl Pencil",
+    "category": "eyeliner",
+    "shade_family": "espresso_brown",
+    "price": 420,
+    "brand": "GlamSync Local",
+    "finish": "Smudged Matte",
+    "hex": "#3b2219",
+    "description": "Ultra creamy blendable kohl for sultry daytime soft smokey definition."
+  },
+  {
+    "id": "chk-001",
+    "name": "Warm Peach Matte Blush",
+    "category": "blush",
+    "shade_family": "peach",
+    "price": 550,
+    "brand": "GlamSync Local",
+    "finish": "Soft Matte",
+    "hex": "#f59e82",
+    "description": "Silky micro-milled blush for a fresh, sun-kissed flush."
+  },
+  {
+    "id": "chk-002",
+    "name": "Rose Quartz Dewy Liquid Highlighter",
+    "category": "highlighter",
+    "shade_family": "champagne_pink",
+    "price": 699,
+    "brand": "GlamSync Local",
+    "finish": "Luminous Glow",
+    "hex": "#fce2db",
+    "description": "Weightless liquid pearl that catches light on the high points of the face."
+  },
+  {
+    "id": "chk-003",
+    "name": "Sculpt & Define Cream Bronzer",
+    "category": "bronzer",
+    "shade_family": "terracotta_tan",
+    "price": 620,
+    "brand": "GlamSync Local",
+    "finish": "Natural Satin",
+    "hex": "#9a6549",
+    "description": "Seamless melt-into-skin bronzer for cheekbone contouring."
+  }
+]
