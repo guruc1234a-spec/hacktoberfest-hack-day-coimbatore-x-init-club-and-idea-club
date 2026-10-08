@@ -117,9 +117,9 @@ During the Hack Day event, Team GlamSync AI built the complete end-to-end applic
 
 ## Working Application
 
-**Live Application:** Local deployment (http://localhost:5173) / Cloud hosting ready.
+**Live Application:** [https://hacktoberfest-hack-day-coimbatore-x.vercel.app](https://hacktoberfest-hack-day-coimbatore-x.vercel.app)
 
-The application allows users to upload outfit images or select presets, capture a selfie for live facial diagnostics, view 3 Gemma 4 AI-generated looks, and launch the real-time MediaPipe AR camera coach mirror.
+The submitted application is functional and accessible through the link above. Users can upload outfit images, analyze facial morphology and skin undertones, get Gemma 4 recommendations, and use the real-time AR camera mirror coach.
 
 ## Demo Video
 
@@ -223,7 +223,7 @@ MIT License. See the [LICENSE](LICENSE) file for details.
 - [x] Work completed during the hackathon documented
 - [x] Team contributions documented
 - [x] Working application is functional
-- [ ] Live application link added where applicable (Deploy on Vercel/Render for public URL)
+- [x] Live application link added where applicable
 - [ ] Demo video added
 - [x] AI and open-source components documented
 - [x] Setup and usage instructions tested
