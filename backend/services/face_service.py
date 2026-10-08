@@ -39,6 +39,21 @@ def get_face_detector(input_size: Tuple[int, int] = (320, 320)) -> Optional[cv2.
 
 # MediaPipe 468/478 Face Mesh landmark index regions
 FACE_REGIONS_LANDMARKS: Dict[str, Dict[str, Any]] = {
+    "face_prep": {
+        "indices": [10, 338, 297, 332, 284, 251, 389, 356, 454, 323, 361, 288, 397, 365, 379, 378, 400, 377, 152, 148, 176, 149, 150, 136, 172, 58, 132, 93, 234, 127, 162, 21, 54, 103, 67, 109],
+        "instruction_default": "Press hydrating toner and moisturizer gently across your entire face in upward motions.",
+        "brush_type": "Fingertip Press / Skincare Sponge"
+    },
+    "forehead": {
+        "indices": [10, 338, 297, 332, 284, 251, 67, 109, 103, 54, 21],
+        "instruction_default": "Smooth primer outward across the forehead T-zone to blur pores and control shine.",
+        "brush_type": "Flat Complexion Brush"
+    },
+    "nose": {
+        "indices": [168, 6, 197, 195, 5, 4, 1, 19, 94, 2],
+        "instruction_default": "Dab foundation & subtle contour along the nasal bridge for slim definition.",
+        "brush_type": "Precision Concealer Brush"
+    },
     "cheekbone": {
         "indices": [116, 123, 147, 213, 138, 345, 352, 376, 433, 367],
         "left_center": 116,
@@ -214,39 +229,54 @@ def _extract_skin_metrics(
 def _get_makeup_palette_and_tips(
     face_shape: str, 
     undertone: str, 
-    tone: str
+    tone: str,
+    skin_hex: str = "#e0af87",
+    ita_score: float = 34.0
 ) -> Tuple[List[str], List[str]]:
     """
-    Generate professional makeup palette hex codes and bespoke beauty coaching tips.
+    Generate professional makeup palette hex codes and bespoke beauty coaching tips tailored
+    specifically to the user's detected facial morphology, skin undertone, tone category, and ITA.
     """
     flattering_colors = []
     tips = []
 
+    # 1. Tailored Color Palette & Undertone Strategy
     if "Warm" in undertone:
         flattering_colors = ["#d97706", "#c2410c", "#b45309", "#92400e", "#b91c1c", "#fde68a"]
-        tips.append("Warm Golden Undertone: Opt for terracotta, peach, copper bronze, and warm ruby red shades.")
+        tips.append(f"Warm Golden Undertone (ITA: {ita_score}°): Your golden skin base is flattered by terracotta, peach bronze, warm amber, and copper ruby pigments.")
     elif "Cool" in undertone:
         flattering_colors = ["#be123c", "#9d174d", "#831843", "#6b21a8", "#cbd5e1", "#f43f5e"]
-        tips.append("Cool Rosy Undertone: Flatter with berry, mauve, cool fuchsia, champagne silver, and plum hues.")
+        tips.append(f"Cool Rosy Undertone (ITA: {ita_score}°): Flatter your porcelain-blue undertones with rich berry, mauve, cool fuchsia, champagne silver, and deep plum hues.")
     elif "Olive" in undertone:
         flattering_colors = ["#854d0e", "#a16207", "#701a75", "#881337", "#ca8a04", "#4d7c0f"]
-        tips.append("Olive Undertone: Enhance with rich bronze, burnt sienna, fig berry, and muted earthy undertones.")
+        tips.append(f"Olive Undertone (ITA: {ita_score}°): Your greenish-golden canvas pairs exquisitely with burnt sienna, rich fig berry, warm bronze, and muted terracotta.")
     else:
         flattering_colors = ["#e11d48", "#db2777", "#ea580c", "#c026d3", "#f59e0b", "#9f1239"]
-        tips.append("Neutral Undertone: Extremely versatile—effortlessly wears both warm peach and cool rose aesthetics.")
+        tips.append(f"Neutral Undertone (ITA: {ita_score}°): Perfectly balanced undertones allow seamless versatility—wear soft peach warm tones or icy cool rose glazes with equal elegance.")
 
+    # 2. Bespoke Face-Shape Contouring & Geometry Guidance
     if face_shape == "Round":
-        tips.append("Face Shape (Round): Focus contour along temples and under cheekbones with an angled brush to lengthen.")
+        tips.append("Custom Strategy for Round Structure: Angle contour vertically beneath the zygomatic arch toward your temples to add sculpted length and visual slimming.")
     elif face_shape == "Square":
-        tips.append("Face Shape (Square): Apply soft curved blush on cheek apples and blend highlighter along the center of forehead & chin.")
+        tips.append("Custom Strategy for Square Jaw Geometry: Soften angular jaw edges by buffing cool bronzer in rounded sweeps and applying circular blush directly on cheek apples.")
     elif face_shape == "Heart":
-        tips.append("Face Shape (Heart): Soften forehead edges with light contouring and emphasize lips with hydrating bold satin finishes.")
+        tips.append("Custom Strategy for Heart Morphology: Balance a wider forehead by dusting subtle contour at upper temples, sweeping blush lower on cheek apples, and highlighting chin center.")
     elif face_shape == "Oval":
-        tips.append("Face Shape (Oval): Balanced symmetry allows high cheekbone lift and precise graphic wings.")
+        tips.append("Custom Strategy for Oval Proportions: Balanced natural proportions—contour right in cheek hollows for instant lift and create crisp winged eyeliner along lashline.")
     elif face_shape == "Diamond":
-        tips.append("Face Shape (Diamond): Soften high cheek peaks and highlight forehead/chin to create balanced harmony.")
-    else:
-        tips.append("Face Shape (Oblong): Apply blush horizontally across cheek apples to visually balance length.")
+        tips.append("Custom Strategy for Diamond Architecture: Soften dramatic cheek peak width by sweeping blush right on the apex while highlighting hairline and jawline corners.")
+    else: # Oblong
+        tips.append("Custom Strategy for Oblong Silhouette: Sweep blush horizontally across cheek apples and softly shade forehead boundary & chin tip to balance vertical height.")
+
+    # 3. Complexion & Tone Customization
+    if "Deep" in tone:
+        tips.append(f"Complexion Customization ({tone}): Opt for rich, highly pigmented jewel tones and golden bronzers to prevent ashiness on skin hex {skin_hex}.")
+    elif "Tan" in tone:
+        tips.append(f"Complexion Customization ({tone}): Golden and copper highlights will enhance your warm radiant glow ({skin_hex}).")
+    elif "Medium" in tone:
+        tips.append(f"Complexion Customization ({tone}): Warm peach blushes and champagne shimmer harmonize beautifully with your skin tone ({skin_hex}).")
+    else: # Fair / Porcelain
+        tips.append(f"Complexion Customization ({tone}): Soft dusty rose blushes and translucent champagne highlighters provide delicate luminosity on {skin_hex}.")
 
     return flattering_colors, tips
 
@@ -443,7 +473,7 @@ def analyze_face_opencv(image_bytes: bytes) -> Dict[str, Any]:
         skin_tone, undertone, skin_hex, ita_score, lum_score = _extract_skin_metrics(face_roi, roi_landmarks)
 
         # 5. Flattering Palette & Makeup Tips
-        flattering_colors, tips = _get_makeup_palette_and_tips(face_shape, undertone, skin_tone)
+        flattering_colors, tips = _get_makeup_palette_and_tips(face_shape, undertone, skin_tone, skin_hex, ita_score)
 
         # 6. Render Glowing OpenCV AR HUD Overlay
         annotated_image = _render_opencv_hud_overlay(

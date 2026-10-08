@@ -560,11 +560,56 @@ export const UploadWizard: React.FC<UploadWizardProps> = ({
                   onChange={(e) => setOccasion(e.target.value)}
                   className="w-full bg-[#fdfaf9] border border-[#eee0dd] rounded-xl px-4 py-2.5 text-xs font-medium text-gray-800 focus:outline-none focus:border-[#701a35]"
                 >
-                  <option value="Wedding Reception / Formal Evening">Wedding Reception / Formal Evening</option>
-                  <option value="Cocktail Gala / Black Tie Soirée">Cocktail Gala / Black Tie Soirée</option>
-                  <option value="High-Fashion Runway / Editorial Shoot">High-Fashion Runway / Editorial Shoot</option>
-                  <option value="Daytime Garden Party / Festive Lunch">Daytime Garden Party / Festive Lunch</option>
-                  <option value="Date Night / Golden Hour Lounge">Date Night / Golden Hour Lounge</option>
+                  <optgroup label="☀️ Everyday & Casual">
+                    <option value="No-Makeup Makeup / Dewy Skin">No-Makeup Makeup / Dewy Skin</option>
+                    <option value="Casual Everyday / Coffee & Errands">Casual Everyday / Coffee & Errands</option>
+                    <option value="Office & Corporate Professional">Office & Corporate Professional</option>
+                    <option value="Daytime Brunch / Picnic Casual">Daytime Brunch / Picnic Casual</option>
+                    <option value="College & Campus Casual">College & Campus Casual</option>
+                    <option value="Work From Home / Zoom Meeting">Work From Home / Zoom Meeting</option>
+                    <option value="Grocery Run / Weekend Errands">Grocery Run / Weekend Errands</option>
+                  </optgroup>
+                  <optgroup label="🌙 Evening & Nightlife">
+                    <option value="Date Night / Golden Hour Lounge">Date Night / Golden Hour Lounge</option>
+                    <option value="Evening Dinner & Cocktail Party">Evening Dinner & Cocktail Party</option>
+                    <option value="Night Club / Festival Rave">Night Club / Festival Rave</option>
+                    <option value="Beach Sunset Party">Beach Sunset Party</option>
+                    <option value="Rooftop Bar / Lounge Night">Rooftop Bar / Lounge Night</option>
+                    <option value="Live Concert / Music Event">Live Concert / Music Event</option>
+                  </optgroup>
+                  <optgroup label="💍 Weddings & Traditional">
+                    <option value="Wedding Guest / Formal Evening">Wedding Guest / Formal Evening</option>
+                    <option value="Wedding Reception / Formal Evening">Wedding Reception / Formal Evening</option>
+                    <option value="Traditional Sangeet & Haldi Ceremony">Traditional Sangeet & Haldi Ceremony</option>
+                    <option value="Grand Bridal / Heirloom Traditional">Grand Bridal / Heirloom Traditional</option>
+                    <option value="Engagement Ceremony">Engagement Ceremony</option>
+                    <option value="Mehendi & Pre-Wedding Function">Mehendi & Pre-Wedding Function</option>
+                  </optgroup>
+                  <optgroup label="🎊 Festive & Gala">
+                    <option value="Festive Gala / Diwali & Eid Celebration">Festive Gala / Diwali & Eid Celebration</option>
+                    <option value="Cocktail Gala / Black Tie Soirée">Cocktail Gala / Black Tie Soirée</option>
+                    <option value="New Year's Eve / Holiday Party">New Year's Eve / Holiday Party</option>
+                    <option value="Cultural Festival / Navratri">Cultural Festival / Navratri</option>
+                    <option value="Puja / Religious Ceremony">Puja / Religious Ceremony</option>
+                  </optgroup>
+                  <optgroup label="📸 Creative & Professional">
+                    <option value="Professional Photoshoot / Studio">Professional Photoshoot / Studio</option>
+                    <option value="Social Media / Content Creation">Social Media / Content Creation</option>
+                    <option value="Runway / Fashion Week Editorial">Runway / Fashion Week Editorial</option>
+                    <option value="Acting / Stage Performance">Acting / Stage Performance</option>
+                  </optgroup>
+                  <optgroup label="🌿 Active & Wellness">
+                    <option value="Gym & Workout / Athleisure">Gym & Workout / Athleisure</option>
+                    <option value="Beach & Pool Day">Beach & Pool Day</option>
+                    <option value="Yoga & Wellness Retreat">Yoga & Wellness Retreat</option>
+                    <option value="Outdoor Hiking / Adventure">Outdoor Hiking / Adventure</option>
+                    <option value="Travel & Airport Look">Travel & Airport Look</option>
+                  </optgroup>
+                  <optgroup label="🧴 Skincare Only">
+                    <option value="Morning Skincare Routine (AM)">Morning Skincare Routine (AM)</option>
+                    <option value="Evening Skincare Routine (PM)">Evening Skincare Routine (PM)</option>
+                    <option value="Full 10-Step Skincare Ritual">Full 10-Step Skincare Ritual</option>
+                  </optgroup>
                 </select>
                 <p className="text-[11px] text-gray-500">
                   Calibrated for camera flashes and dimmed social venue lighting.

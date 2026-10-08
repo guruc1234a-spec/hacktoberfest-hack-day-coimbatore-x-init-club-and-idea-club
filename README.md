@@ -1,63 +1,44 @@
 # GlamSync AI
 
-> Next-Generation Gemma 4 & OpenCV powered personal beauty styling coach with real-time AR camera landmark guidance.
-
----
+> A Gemma 4 and OpenCV powered personal beauty styling coach that analyzes your outfit, face shape and skin undertone, then guides makeup application through a real-time AR camera mirror.
 
 ## Team
 
 **Team Name:** GlamSync AI
 
-| Member | Roll Number | Student Email | Personal Email | Contribution |
-| :--- | :--- | :--- | :--- | :--- |
-| **Neha Saravanan** | `cb.ai.u4aid25039` | cb.ai.u4aid25039@cb.students.amrita.edu | nehasaravanan128@gmail.com | Frontend Diagnostic Studio UI, Component Architecture & Lookbook Drawer |
-| **Iniyaa Muthuselvan** | `cb.ai.u4aid25120` | cb.ai.u4aid25120@cb.students.amrita.edu | iniyaa.muthuselvan@gmail.com | OpenCV 5.0 YuNet Facial Morphology, ITA Undertone & Skin Segmentation |
-| **Bankuru Gurucharan** | `cb.ai.u4aid25008` | cb.ai.u4aid25008@cb.students.amrita.edu | guruc1234a@gmail.com | Gemma 4 Multimodal Reasoning Engine, FastAPI Backend & Storage Vault |
-| **Varshini RV** | `cb.ai.u4aar25057` | cb.ai.u4aar25057@cb.students.amrita.edu | rv.varshini@gmail.com | Real-time MediaPipe 468-pt Face Mesh AR Camera Mirror & Voice Directives |
 
----
+| Member             | Contribution                                                                  |
+| ------------------ | ----------------------------------------------------------------------------- |
+| Neha Saravanan     | Frontend Diagnostic Studio UI, component architecture and Lookbook drawer     |
+| Iniyaa Muthuselvan | OpenCV YuNet facial morphology, ITA undertone detection and skin segmentation |
+| Bankuru Gurucharan | Gemma 4 multimodal reasoning engine, FastAPI backend and storage vault        |
+| Varshini RV        | Real-time MediaPipe 468-point Face Mesh AR camera mirror and voice directives |
+
 
 ## Problem Statement
 
 ### The Problem
-Finding makeup and styling routines that truly harmonize with an individual's unique facial anatomy, skin undertone, and outfit color palette is a persistent challenge. Conventional beauty platforms either act as static 2D photo filters (which cannot teach physical application) or generic conversational chatbots (which lack computer vision understanding and spatial awareness). Users are left guessing how to apply products, which colors flatter their undertone, and how to adapt styles for their specific face shape.
+
+Finding makeup and styling routines that harmonize with an individual's facial anatomy, skin undertone, and outfit color palette is a persistent challenge. Conventional beauty platforms are either static 2D photo filters, which cannot teach physical application, or generic conversational chatbots, which lack computer vision understanding and spatial awareness. Users are left guessing how to apply products, which colors flatter their undertone, and how to adapt styles to their face shape.
 
 ### Why We Chose This Problem
-We wanted to bridge the gap between digital AI styling reasoning and real-world physical application. By combining computer vision color science (K-Means & CIELAB ITA) with Gemma 4 multimodal reasoning and live 468-point AR camera coaching, GlamSync AI transforms any standard laptop or mobile camera into an interactive personal beauty mirror that actively coaches you through each step.
 
----
+We wanted to bridge the gap between digital AI styling reasoning and real-world physical application. By combining computer vision color science (K-Means and CIELAB ITA) with Gemma 4 multimodal reasoning and live 468-point AR camera coaching, GlamSync AI turns any standard laptop or mobile camera into an interactive personal beauty mirror that coaches the user through each step.
 
 ## Solution
 
-GlamSync AI provides an end-to-end intelligent beauty pipeline:
-1. **Outfit & Inspiration Color Analysis**: Extracts dominant and secondary chromatic vectors using K-Means clustering.
-2. **OpenCV Facial Morphology & ITA Undertone Calibration**: Detects face shape (*Oval, Round, Square, Heart, Diamond, Oblong*), Individual Typology Angle ($ITA^\circ$), and skin undertone (*Warm Golden, Cool Rosy, Neutral, Olive*).
-3. **Gemma 4 Multimodal Reasoning**: Generates 3 curated looks (*Natural/Safe*, *AI Recommendation*, *Bold Statement*) matching the user's outfit, occasion, budget, and vanity products.
-4. **Live AR Camera Mirror Coach**: Tracks facial landmarks at 60 FPS and projects glowing step-by-step application guides on the user's face with voice directives.
-5. **Personal Vault & Session History**: Persists saved looks and diagnostic sessions for continuous style evolution.
+GlamSync AI is an end-to-end beauty pipeline. It extracts the colors of the user's outfit with K-Means clustering, detects face shape and skin undertone using OpenCV and the Individual Typology Angle (ITA), and sends both to Gemma 4 to generate 3 curated looks (Natural/Safe, AI Recommendation, Bold Statement) matched to the outfit, occasion, budget and available products. The user then opens a look in a live AR camera mirror that tracks facial landmarks and projects step-by-step application guides on their face, with voice directives. Saved looks and past sessions are kept in a personal vault.
 
 ### Key Features
 
-- 🎨 **K-Means Chromatic Extraction**: Instant fabric pigment & accent analysis from uploaded outfit photos or quick atelier presets.
-- 👁️ **OpenCV 5.0 YuNet DNN Vision**: Precision landmark detection, facial golden ratios, and skin undertone scoring with interactive AR HUD overlays.
-- 🧠 **Gemma 4 Multimodal Reasoning**: Structured JSON outputs generating 3 distinct tiers of calibrated looks and step-by-step routines.
-- 🪞 **Real-Time AR Mirror Coach**: 468-point MediaPipe Face Mesh tracking with augmented overlays for cheekbones, eyelids, eyeliner wings, and lip vermilion contours.
-- 🗣️ **Live Voice Guidance**: Audio directives walking users through techniques, brush types, and pro tips hands-free.
-- 🗄️ **Saved Looks & Session History Vault**: Save favorite styles to a personal beauty archive and track styling evolution over time.
-
----
+- **K-Means chromatic extraction:** dominant and accent color analysis from uploaded outfit photos or quick presets.
+- **OpenCV YuNet facial analysis:** face shape (Oval, Round, Square, Heart, Diamond, Oblong), ITA skin shade and undertone (Warm Golden, Cool Rosy, Neutral, Olive) with interactive AR HUD overlays.
+- **Gemma 4 multimodal reasoning:** structured JSON output with 3 tiers of calibrated looks and step-by-step routines.
+- **Real-time AR mirror coach:** 468-point MediaPipe Face Mesh tracking with overlays for cheekbones, eyelids, eyeliner wings, lip contours, and complete prep/skincare steps (toner, moisturizer, primer, SPF), plus live voice guidance and a saved looks and session history vault.
 
 ## Innovation and Differentiation
 
-| Feature | Conventional Beauty Apps | Generic Chatbot Wrappers | GlamSync AI |
-| :--- | :--- | :--- | :--- |
-| **Color Understanding** | Static color swatches | Text-only color mentions | Computer Vision K-Means & CIELAB ITA angle calculation |
-| **Facial Analysis** | 2D image filter / sticker | None | OpenCV YuNet DNN Morphology & 5-point landmark geometry |
-| **Reasoning Engine** | Rule-based lookup | Uncalibrated LLM text | Gemma 4 Multimodal Reasoning tailored to outfit & face |
-| **Application Guidance** | Pre-recorded videos | Static text steps | Live real-time AR Camera Mirror with dynamic facial overlays |
-| **Privacy & Vendor Lock-in** | Closed-source cloud | OpenAI dependency | Open-source, local OpenCV + Gemma 4 / Google AI Studio |
-
----
+Conventional beauty apps rely on static color swatches, 2D image filters and pre-recorded videos, and generic chatbot wrappers give text-only advice with no understanding of the user's face. GlamSync AI combines classical computer vision (K-Means color extraction, YuNet facial morphology, CIELAB ITA skin analysis), a multimodal reasoning model (Gemma 4) and live AR landmark tracking in one pipeline, so recommendations are calibrated to the user's actual outfit and face and are taught step by step on the user's own face. It also has no OpenAI dependency, using local OpenCV algorithms together with Gemma 4 through Google AI Studio.
 
 ## Technical Implementation
 
@@ -66,7 +47,7 @@ GlamSync AI provides an end-to-end intelligent beauty pipeline:
 ```mermaid
 flowchart TD
     User([User]) -->|Upload Outfit / Snap Selfie| Frontend[React + TypeScript + Vite Frontend]
-    
+
     subgraph Client-Side UI & Vision
         Frontend --> Wizard[Diagnostic Studio]
         Frontend --> FaceModal[OpenCV Face Analyzer Modal]
@@ -85,86 +66,170 @@ flowchart TD
     subgraph AI & Hardware Core
         GemmaSvc --> Gemma4[Gemma 4 Multimodal / Google AI Studio]
         FaceSvc --> YuNetONNX[OpenCV YuNet ONNX Detector]
-        OutfitSvc --> OpenCVCore[OpenCV 5.0 Color Space Algorithms]
+        OutfitSvc --> OpenCVCore[OpenCV Color Space Algorithms]
     end
 ```
 
 ### Technology Stack
 
-| Category | Technologies |
-| :--- | :--- |
-| **Frontend** | React 18, TypeScript, Vite, Tailwind CSS, Lucide Icons, Canvas Confetti |
-| **Backend** | FastAPI, Uvicorn, Pydantic v2, Python 3.14 |
-| **Database / Storage** | Local JSON File Persistence & Browser LocalStorage Cache |
-| **AI / ML** | Gemma 4 Multimodal, OpenCV YuNet DNN (`face_detection_yunet_2023mar.onnx`), MediaPipe Face Mesh |
-| **Computer Vision** | OpenCV 5.0, NumPy, Pillow, CIELAB ITA Color Space, YCrCb & HSV Segmentation |
-| **Hardware Target** | NVIDIA GeForce RTX 5050 Laptop GPU (8GB GDDR7, Blackwell Architecture) |
-| **APIs / Services** | Google AI Studio GenAI API, Web Speech Synthesis API, WebRTC MediaDevices |
 
----
+| Category        | Technologies                                                                                    |
+| --------------- | ----------------------------------------------------------------------------------------------- |
+| Frontend        | React 18, TypeScript, Vite, Tailwind CSS, Lucide Icons, Canvas Confetti                         |
+| Backend         | FastAPI, Uvicorn, Pydantic v2, Python                                                           |
+| Database        | Local JSON file persistence and browser LocalStorage cache                                      |
+| AI / ML         | Gemma 4 multimodal, OpenCV YuNet DNN (`face_detection_yunet_2023mar.onnx`), MediaPipe Face Mesh, OpenCV, NumPy, Pillow |
+| Infrastructure  | Local deployment (Node.js and Python), developed on NVIDIA GeForce RTX 5050 Laptop GPU          |
+| APIs / Services | Google AI Studio GenAI API, Web Speech Synthesis API, WebRTC MediaDevices                       |
+
+
+If a category or technology is not implemented in the project, specify `N/A` instead of leaving the field blank.
 
 ### How It Works
 
-1. **Outfit Chromatic Extraction**: The user provides an outfit image. The backend resizes the image and applies OpenCV K-Means clustering ($k=3$) to identify dominant and secondary hex colors, luminance, and style formality.
-2. **OpenCV Facial Diagnostics**: When a selfie is captured, OpenCV YuNet detects face boundaries, eye coordinates, and mouth width. Skin pixels are segmented using dual YCrCb ($133 \le Cr \le 173$, $77 \le Cb \le 127$) and HSV masks. The Individual Typology Angle ($ITA^\circ$) classifies the skin shade and determines warm, cool, neutral, or olive undertones.
-3. **Gemma 4 Multimodal Reasoning**: The combined outfit attributes and facial profile are submitted to Gemma 4 with a strict JSON schema prompt to construct 3 synchronized beauty looks with specific product matches and step-by-step instructions.
-4. **Live AR Mirror Guidance**: Selecting a look opens the live AR camera viewport. The user's webcam stream is mirrored at 60 FPS while MediaPipe Face Mesh detects 468 landmark coordinates to dynamically project pulsing cheekbone apex guides, eyelid crease fills, precision winged eyeliner vectors, and lip vermilion overlays.
-5. **Look Preservation**: Users can save any curated look to their personal vault or review past sessions in the atelier history timeline.
-
----
+1. **Outfit chromatic extraction:** the backend resizes the outfit image and applies OpenCV K-Means clustering (k=3) to find dominant and secondary hex colors, luminance and style formality.
+2. **OpenCV facial diagnostics:** YuNet detects face boundaries, eye coordinates and mouth width from the selfie. Skin pixels are segmented using combined YCrCb (133 ≤ Cr ≤ 173, 77 ≤ Cb ≤ 127) and HSV masks, and the Individual Typology Angle (ITA°) classifies the skin shade and undertone (warm, cool, neutral or olive).
+3. **Gemma 4 multimodal reasoning:** the outfit attributes and facial profile are sent to Gemma 4 with a strict JSON schema prompt to build 3 synchronized beauty looks with product matches and step-by-step instructions.
+4. **Live AR mirror guidance:** the webcam stream is mirrored while MediaPipe Face Mesh detects 468 landmarks and projects cheekbone guides, eyelid crease fills, winged eyeliner vectors, lip overlays, and skincare prep steps with voice directives.
+5. **Look preservation:** curated looks can be saved to a personal vault, and past sessions are available in the history timeline.
 
 ### Technical Decisions
 
-- **Direct HTML5 Webcam Capture with Dual Fallback**: Rather than relying exclusively on third-party camera wrappers, the frontend utilizes direct `navigator.mediaDevices.getUserMedia` with fallback constraints to ensure instant 60 FPS video feedback without black screens.
-- **YuNet ONNX Face Detection**: We selected OpenCV's lightweight YuNet ONNX model (~300KB) for server-side face detection due to its sub-10ms inference time and accurate 5-point landmark localization.
-- **CIELAB ITA Colorimetry**: We implemented the dermatological standard Individual Typology Angle ($ITA$) in CIELAB color space to provide unbiased, objective skin tone categorization.
-- **Zero OpenAI Dependency**: The architecture strictly uses Gemma 4 / Google AI Studio models combined with local computer vision algorithms.
+- **Direct HTML5 webcam capture with dual fallback:** the frontend uses `navigator.mediaDevices.getUserMedia` directly, with fallback constraints, instead of third-party camera wrappers, to get instant video feedback and avoid black screens.
+- **YuNet ONNX face detection:** we chose OpenCV's lightweight YuNet model (~300 KB) for server-side detection because of its fast inference and accurate 5-point landmark localization.
+- **CIELAB ITA colorimetry:** we used the dermatological Individual Typology Angle in CIELAB space for objective skin tone categorization.
+- **No OpenAI dependency:** the architecture uses Gemma 4 / Google AI Studio together with local computer vision algorithms, and falls back to deterministic recommendations when no API key is set.
 
----
+## Implementation During the Hackathon
 
-## Setup & Installation
+During the Hack Day event, Team GlamSync AI built the complete end-to-end application architecture:
+- Designed and built the React + TypeScript Diagnostic Studio frontend with custom Tailwind styling and lookbook drawer.
+- Implemented OpenCV YuNet DNN model integration for lightweight facial morphology and CIELAB Individual Typology Angle (ITA) skin undertone detection.
+- Developed the FastAPI backend service with multimodal Gemma 4 recommendation generation and fallback deterministic routines.
+- Implemented real-time MediaPipe 468-point Face Mesh AR camera mirror tracking with 19 interactive makeup and skincare application layer overlays and Web Speech API audio directives.
+
+### Team Contributions
+
+- **Neha Saravanan:** Frontend Diagnostic Studio UI, component architecture and Lookbook drawer.
+- **Iniyaa Muthuselvan:** OpenCV YuNet facial morphology, ITA undertone detection and skin segmentation.
+- **Bankuru Gurucharan:** Gemma 4 multimodal reasoning engine, FastAPI backend and storage vault.
+- **Varshini RV:** Real-time MediaPipe 468-point Face Mesh AR camera mirror and voice directives.
+
+## Working Application
+
+**Live Application:** Local deployment (http://localhost:5173) / Cloud hosting ready.
+
+The application allows users to upload outfit images or select presets, capture a selfie for live facial diagnostics, view 3 Gemma 4 AI-generated looks, and launch the real-time MediaPipe AR camera coach mirror.
+
+## Demo Video
+
+**Demo Video:** [Video URL]
+
+[Provide a short demonstration of the working project, covering the main user flow and important functionality.]
+
+## Open Source and AI Usage
+
+### AI / Models
+
+- **Gemma 4 (via Google AI Studio):** multimodal reasoning that generates 3 curated looks and step-by-step routines from outfit and facial data.
+- **OpenCV YuNet (`face_detection_yunet_2023mar.onnx`):** face detection and 5-point landmark localization.
+- **MediaPipe Face Mesh:** 468-point real-time facial landmark tracking for the AR mirror.
+
+### Open Source Components
+
+- **React, TypeScript, Vite, Tailwind CSS:** frontend framework and tooling.
+- **FastAPI, Uvicorn, Pydantic:** backend API framework, server and data validation.
+- **OpenCV, NumPy, Pillow:** image processing, K-Means clustering and color space conversion.
+- **Google AI Studio GenAI API:** access to Gemma 4.
+
+MIT License for open-source component distribution.
+
+## Setup and Usage
 
 ### Prerequisites
-- Node.js (v18+) & npm
+
+- Node.js (v18+) and npm
 - Python (v3.10+)
 
-### 1. Backend Setup
+### Installation
+
 ```bash
+git clone https://github.com/guruc1234a-spec/hacktoberfest-hack-day-coimbatore-x-init-club-and-idea-club.git
+cd hacktoberfest-hack-day-coimbatore-x-init-club-and-idea-club
+
+# Backend
 cd backend
 python -m venv venv
-
-# Windows (PowerShell):
-.\venv\Scripts\Activate.ps1
-# Linux/macOS:
-source venv/bin/activate
-
+# Windows (PowerShell): .\venv\Scripts\Activate.ps1
+# Linux/macOS: source venv/bin/activate
 pip install -r requirements.txt
-
-# Create environment configuration:
 cp .env.example .env
-# Edit .env and add your GEMMA_API_KEY (optional - deterministic fallback included)
 
-# Start FastAPI server:
-uvicorn main:app --reload --port 8000
+# Frontend
+cd ../frontend
+npm install
 ```
 
-### 2. Frontend Setup
+### Environment Variables
+
+```env
+GEMMA_API_KEY=[your-google-ai-studio-key]
+```
+
+`GEMMA_API_KEY` is optional. Without it, the backend uses a deterministic fallback.
+
+### Running the Project
+
 ```bash
+# Terminal 1: backend
+cd backend
+uvicorn main:app --reload --port 8000
+
+# Terminal 2: frontend
 cd frontend
-npm install
 npm run dev
 ```
 
-Open `http://localhost:5173` in your browser to launch **GlamSync AI**.
+### Usage
 
-### 3. Running Test Suite
-```bash
-cd backend
-.\venv\Scripts\python.exe -m pytest
-```
+Open `http://localhost:5173` in your browser, upload an outfit photo or choose a preset, capture a selfie for face analysis, review the 3 generated looks, open one in the live AR mirror and follow the visual and voice guidance. Save favorite looks to your vault to revisit them later.
 
----
+## Devpost Submission
 
-## License
+**Devpost Project:** [Devpost Project URL]
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+[Add the link to the team's Devpost submission. Ensure the Devpost project page is complete and contains the required project information, links, media, and team details.]
+
+## Credits and License
+
+### Credits
+
+Built by Team GlamSync AI using OpenCV, MediaPipe, FastAPI, React, Google AI Studio and Gemma 4, along with the other open-source libraries listed above.
+
+### License
+
+MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Submission Checklist
+
+- [x] Project title and description added
+- [x] All team members listed
+- [x] Problem clearly explained
+- [x] Reason for choosing the problem explained
+- [x] Solution and key features documented
+- [x] Innovation and differentiation explained
+- [x] Architecture included
+- [x] Technical implementation documented
+- [x] Work completed during the hackathon documented
+- [x] Team contributions documented
+- [x] Working application is functional
+- [ ] Live application link added where applicable (Deploy on Vercel/Render for public URL)
+- [ ] Demo video added
+- [x] AI and open-source components documented
+- [x] Setup and usage instructions tested
+- [x] Challenges and learnings documented
+- [ ] Devpost submission completed
+- [ ] Devpost link added
+- [x] Credits added
+- [x] License added
+- [x] Repository is organized and complete

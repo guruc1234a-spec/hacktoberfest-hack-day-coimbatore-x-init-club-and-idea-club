@@ -1,5 +1,304 @@
 [
   {
+    "id": "hist-1791452603870-56no",
+    "type": "coach_session",
+    "timestamp": "2026-10-08T09:43:23.870Z",
+    "title": "AR Coaching Session: Bespoke Oval Radiant Aura",
+    "summary": "Completed all 4 interactive AR tutorial steps for Bespoke Oval Radiant Aura.",
+    "details": {
+      "look_id": "look-2-recommended",
+      "look_name": "Bespoke Oval Radiant Aura",
+      "completed_steps": 4,
+      "intensity": 7
+    }
+  },
+  {
+    "id": "hist-1791452514898-rer1",
+    "type": "look_generation",
+    "timestamp": "2026-10-08T09:41:54.898Z",
+    "title": "Gemma Look Generation: Wedding Reception / Formal Evening",
+    "summary": "Synthesized 3 bespoke looks for #8a878d outfit (Traditional style).",
+    "details": {
+      "occasion": "Wedding Reception / Formal Evening",
+      "dominant_color": "#8a878d",
+      "secondary_color": "#d5c7c3",
+      "style": "Traditional",
+      "intensity": "Moderate",
+      "looks_count": 3
+    }
+  },
+  {
+    "type": "look_generation",
+    "title": "Look Generation: Wedding Reception / Formal Evening",
+    "summary": "Created 3 Gemma 4 looks for #8a878d palette and Traditional style.",
+    "details": {
+      "occasion": "Wedding Reception / Formal Evening",
+      "style": "Traditional",
+      "intensity": "Moderate",
+      "dominant_color": "#8a878d",
+      "secondary_color": "#d5c7c3",
+      "looks_count": 3
+    },
+    "id": "hist-3d47aa0d",
+    "timestamp": "2026-10-08T09:41:54.890726+00:00"
+  },
+  {
+    "type": "outfit_analysis",
+    "title": "Outfit Analysis: Modern / Contemporary",
+    "summary": "Extracted dominant tone #8a878d and secondary accent #d5c7c3.",
+    "details": {
+      "dominant_color": "#8a878d",
+      "secondary_color": "#d5c7c3",
+      "style": "Modern / Contemporary",
+      "formality": "Moderate",
+      "palette": [
+        "#8a878d",
+        "#d5c7c3",
+        "#2f2b26"
+      ]
+    },
+    "id": "hist-5ee8b92f",
+    "timestamp": "2026-10-08T09:41:41.665785+00:00"
+  },
+  {
+    "type": "face_analysis",
+    "title": "OpenCV Facial Scan: Oval Shape",
+    "summary": "Detected Oval morphology with Neutral (Balanced) undertone (#90776d).",
+    "details": {
+      "face_shape": "Oval",
+      "skin_tone": "Tan / Golden Medium",
+      "skin_undertone": "Neutral (Balanced)",
+      "skin_hex": "#90776d",
+      "ita_score": 13.5,
+      "symmetry_score": 97.0
+    },
+    "id": "hist-899f4846",
+    "timestamp": "2026-10-08T09:40:40.941798+00:00"
+  },
+  {
+    "type": "face_analysis",
+    "title": "OpenCV Facial Scan: Oval Shape",
+    "summary": "Detected Oval morphology with Neutral (Balanced) undertone (#ccac9b).",
+    "details": {
+      "face_shape": "Oval",
+      "skin_tone": "Very Light / Porcelain",
+      "skin_undertone": "Neutral (Balanced)",
+      "skin_hex": "#ccac9b",
+      "ita_score": 60.5,
+      "symmetry_score": 97.4
+    },
+    "id": "hist-fb2f3a91",
+    "timestamp": "2026-10-08T09:40:28.569117+00:00"
+  },
+  {
+    "type": "face_analysis",
+    "title": "OpenCV Facial Scan: Oval Shape",
+    "summary": "Detected Oval morphology with Neutral (Balanced) undertone (#c0a396).",
+    "details": {
+      "face_shape": "Oval",
+      "skin_tone": "Very Light / Porcelain",
+      "skin_undertone": "Neutral (Balanced)",
+      "skin_hex": "#c0a396",
+      "ita_score": 60.5,
+      "symmetry_score": 99.2
+    },
+    "id": "hist-a1682471",
+    "timestamp": "2026-10-08T09:40:06.349827+00:00"
+  },
+  {
+    "type": "face_analysis",
+    "title": "OpenCV Facial Scan: Oval Shape",
+    "summary": "Detected Oval morphology with Neutral (Balanced) undertone (#a9887a).",
+    "details": {
+      "face_shape": "Oval",
+      "skin_tone": "Medium / Beige",
+      "skin_undertone": "Neutral (Balanced)",
+      "skin_hex": "#a9887a",
+      "ita_score": 38.7,
+      "symmetry_score": 99.3
+    },
+    "id": "hist-7748c6f4",
+    "timestamp": "2026-10-08T09:39:24.726062+00:00"
+  },
+  {
+    "type": "face_analysis",
+    "title": "OpenCV Facial Scan: Oval Shape",
+    "summary": "Detected Oval morphology with Warm (Golden / Peachy) undertone (#af8e7a).",
+    "details": {
+      "face_shape": "Oval",
+      "skin_tone": "Medium / Beige",
+      "skin_undertone": "Warm (Golden / Peachy)",
+      "skin_hex": "#af8e7a",
+      "ita_score": 37.6,
+      "symmetry_score": 98.0
+    },
+    "id": "hist-8669fe45",
+    "timestamp": "2026-10-08T09:39:02.770885+00:00"
+  },
+  {
+    "type": "look_saved",
+    "title": "Saved Look: Test Evening Glam",
+    "summary": "Saved look 'Test Evening Glam' to personal beauty vault.",
+    "details": {
+      "saved_look_id": "saved-d7c295f0",
+      "look_name": "Test Glam Look"
+    },
+    "id": "hist-0c2a0d0f",
+    "timestamp": "2026-10-08T09:35:22.053019+00:00"
+  },
+  {
+    "type": "face_analysis",
+    "title": "OpenCV Facial Scan: Square Shape",
+    "summary": "Detected Square morphology with Warm (Golden / Peachy) undertone (#dbaf8c).",
+    "details": {
+      "face_shape": "Square",
+      "skin_tone": "Fair / Light",
+      "skin_undertone": "Warm (Golden / Peachy)",
+      "skin_hex": "#dbaf8c",
+      "ita_score": 45.6,
+      "symmetry_score": 94.0
+    },
+    "id": "hist-8360424f",
+    "timestamp": "2026-10-08T09:35:22.009963+00:00"
+  },
+  {
+    "type": "look_generation",
+    "title": "Look Generation: Reception Gala",
+    "summary": "Created 3 Gemma 4 looks for #801235 palette and Elegant style.",
+    "details": {
+      "occasion": "Reception Gala",
+      "style": "Elegant",
+      "intensity": "Moderate",
+      "dominant_color": "#801235",
+      "secondary_color": "#b38747",
+      "looks_count": 3
+    },
+    "id": "hist-e6a249f0",
+    "timestamp": "2026-10-08T09:35:21.807850+00:00"
+  },
+  {
+    "type": "outfit_analysis",
+    "title": "Outfit Analysis: Bold / Festive",
+    "summary": "Extracted dominant tone #b5274f and secondary accent #b5274f.",
+    "details": {
+      "dominant_color": "#b5274f",
+      "secondary_color": "#b5274f",
+      "style": "Bold / Festive",
+      "formality": "High",
+      "palette": [
+        "#b5274f",
+        "#b5274f",
+        "#b5274f"
+      ]
+    },
+    "id": "hist-010e5c88",
+    "timestamp": "2026-10-08T09:35:21.782668+00:00"
+  },
+  {
+    "type": "look_generation",
+    "title": "Look Generation: Sangeet Night",
+    "summary": "Created 3 Gemma 4 looks for #1e3a8a palette and Traditional style.",
+    "details": {
+      "occasion": "Sangeet Night",
+      "style": "Traditional",
+      "intensity": "Glam",
+      "dominant_color": "#1e3a8a",
+      "secondary_color": "#c084fc",
+      "looks_count": 3
+    },
+    "id": "hist-0877a9a1",
+    "timestamp": "2026-10-08T09:33:42.779887+00:00"
+  },
+  {
+    "type": "look_generation",
+    "title": "Look Generation: Wedding Reception",
+    "summary": "Created 3 Gemma 4 looks for #065f46 palette and Traditional style.",
+    "details": {
+      "occasion": "Wedding Reception",
+      "style": "Traditional",
+      "intensity": "Glam",
+      "dominant_color": "#065f46",
+      "secondary_color": "#f59e0b",
+      "looks_count": 3
+    },
+    "id": "hist-9be94f3d",
+    "timestamp": "2026-10-08T09:33:13.859643+00:00"
+  },
+  {
+    "type": "look_generation",
+    "title": "Look Generation: Gala Dinner",
+    "summary": "Created 3 Gemma 4 looks for #801235 palette and Traditional style.",
+    "details": {
+      "occasion": "Gala Dinner",
+      "style": "Traditional",
+      "intensity": "Glam",
+      "dominant_color": "#801235",
+      "secondary_color": "#d9a566",
+      "looks_count": 3
+    },
+    "id": "hist-ed518a57",
+    "timestamp": "2026-10-08T09:32:44.828514+00:00"
+  },
+  {
+    "type": "look_saved",
+    "title": "Saved Look: Test Evening Glam",
+    "summary": "Saved look 'Test Evening Glam' to personal beauty vault.",
+    "details": {
+      "saved_look_id": "saved-b4819a1a",
+      "look_name": "Test Glam Look"
+    },
+    "id": "hist-6945db1c",
+    "timestamp": "2026-10-08T09:31:53.686621+00:00"
+  },
+  {
+    "type": "face_analysis",
+    "title": "OpenCV Facial Scan: Square Shape",
+    "summary": "Detected Square morphology with Warm (Golden / Peachy) undertone (#dbaf8c).",
+    "details": {
+      "face_shape": "Square",
+      "skin_tone": "Fair / Light",
+      "skin_undertone": "Warm (Golden / Peachy)",
+      "skin_hex": "#dbaf8c",
+      "ita_score": 45.6,
+      "symmetry_score": 94.0
+    },
+    "id": "hist-f7f59d17",
+    "timestamp": "2026-10-08T09:31:53.660133+00:00"
+  },
+  {
+    "type": "look_generation",
+    "title": "Look Generation: Reception Gala",
+    "summary": "Created 3 Gemma 4 looks for #801235 palette and Elegant style.",
+    "details": {
+      "occasion": "Reception Gala",
+      "style": "Elegant",
+      "intensity": "Moderate",
+      "dominant_color": "#801235",
+      "secondary_color": "#b38747",
+      "looks_count": 3
+    },
+    "id": "hist-a760b4c6",
+    "timestamp": "2026-10-08T09:31:53.450648+00:00"
+  },
+  {
+    "type": "outfit_analysis",
+    "title": "Outfit Analysis: Bold / Festive",
+    "summary": "Extracted dominant tone #b5274f and secondary accent #b5274f.",
+    "details": {
+      "dominant_color": "#b5274f",
+      "secondary_color": "#b5274f",
+      "style": "Bold / Festive",
+      "formality": "High",
+      "palette": [
+        "#b5274f",
+        "#b5274f",
+        "#b5274f"
+      ]
+    },
+    "id": "hist-3bd39b2c",
+    "timestamp": "2026-10-08T09:31:53.425970+00:00"
+  },
+  {
     "type": "look_saved",
     "title": "Saved Look: Test Evening Glam",
     "summary": "Saved look 'Test Evening Glam' to personal beauty vault.",

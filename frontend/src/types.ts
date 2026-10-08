@@ -64,7 +64,7 @@ export interface TutorialStep {
   step: number;
   title: string;
   instruction: string;
-  face_region: 'cheekbone' | 'eyelid' | 'lips' | 'eyeliner';
+  face_region: 'cheekbone' | 'eyelid' | 'lips' | 'eyeliner' | 'full_face';
   technique: string;
   estimated_time_sec?: number;
   pro_tip?: string;
