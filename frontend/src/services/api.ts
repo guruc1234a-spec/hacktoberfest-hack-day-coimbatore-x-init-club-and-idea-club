@@ -160,24 +160,74 @@ export const deleteSavedLookFromBackend = async (lookId: string): Promise<void> 
 
 // === HISTORY API ===
 
-export const fetchHistory = async (): Promise<HistoryItem[]> => {
+export const recordHistoryEntry = async (entry: Partial<HistoryItem>): Promise<HistoryItem> => {
+  const fullEntry: HistoryItem = {
+    id: entry.id || `hist-${Date.now()}-${Math.random().toString(36).substr(2, 4)}`,
+    type: entry.type || 'look_generation',
+    timestamp: entry.timestamp || new Date().toISOString(),
+    title: entry.title || 'GlamSync Activity',
+    summary: entry.summary || 'Diagnostic activity recorded.',
+    details: entry.details || {}
+  };
+
+  // 1. Update localStorage immediately
   try {
-    const res = await axios.get<HistoryItem[]>(`${API_BASE_URL}/history`, { timeout: 5000 });
+    const local = localStorage.getItem('glamsync_history');
+    const list: HistoryItem[] = local ? JSON.parse(local) : [];
+    const updated = [fullEntry, ...list.filter(h => h.id !== fullEntry.id)].slice(0, 50);
+    localStorage.setItem('glamsync_history', JSON.stringify(updated));
+  } catch (err) {
+    console.warn("Local storage write error:", err);
+  }
+
+  // 2. Persist to backend
+  try {
+    const res = await axios.post<HistoryItem>(`${API_BASE_URL}/history`, fullEntry, { timeout: 4000 });
     return res.data;
   } catch (err) {
-    console.warn("History fallback:", err);
-    const local = localStorage.getItem('glamsync_history');
-    if (local) {
-      try { return JSON.parse(local); } catch {}
-    }
-    return [];
+    console.warn("Backend history sync fallback to local:", err);
+    return fullEntry;
   }
+};
+
+export const fetchHistory = async (): Promise<HistoryItem[]> => {
+  let backendList: HistoryItem[] = [];
+  try {
+    const res = await axios.get<HistoryItem[]>(`${API_BASE_URL}/history`, { timeout: 4000 });
+    backendList = res.data;
+  } catch (err) {
+    console.warn("Backend history fetch failed, relying on local storage:", err);
+  }
+
+  const local = localStorage.getItem('glamsync_history');
+  const localList: HistoryItem[] = local ? JSON.parse(local) : [];
+
+  // Merge unique by ID
+  const idMap = new Map<string, HistoryItem>();
+  [...backendList, ...localList].forEach(item => {
+    if (item && item.id && !idMap.has(item.id)) {
+      idMap.set(item.id, item);
+    }
+  });
+
+  const merged = Array.from(idMap.values()).sort(
+    (a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
+  );
+
+  // Sync merged back to local cache
+  if (merged.length > 0) {
+    localStorage.setItem('glamsync_history', JSON.stringify(merged.slice(0, 50)));
+  }
+
+  return merged;
 };
 
 export const clearHistoryFromBackend = async (): Promise<void> => {
   try {
-    await axios.delete(`${API_BASE_URL}/history`, { timeout: 5000 });
-  } catch (err) {}
+    await axios.delete(`${API_BASE_URL}/history`, { timeout: 4000 });
+  } catch (err) {
+    console.warn("Backend clear history fallback:", err);
+  }
   localStorage.removeItem('glamsync_history');
 };
 

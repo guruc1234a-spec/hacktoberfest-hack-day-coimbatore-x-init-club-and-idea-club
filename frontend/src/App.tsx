@@ -25,7 +25,8 @@ import {
   saveLookToBackend,
   deleteSavedLookFromBackend,
   fetchHistory,
-  clearHistoryFromBackend
+  clearHistoryFromBackend,
+  recordHistoryEntry
 } from './services/api';
 import { Sparkles, ArrowLeft, RefreshCw, Layers, Shield, Cpu, ScanFace, Bookmark, History } from 'lucide-react';
 
@@ -46,12 +47,17 @@ export const App: React.FC = () => {
   const [history, setHistory] = useState<HistoryItem[]>([]);
   const [systemHealth, setSystemHealth] = useState<any>(null);
 
+  const refreshHistory = async () => {
+    const updated = await fetchHistory();
+    setHistory(updated);
+  };
+
   useEffect(() => {
     // Initial data load
     fetchProducts().then(setProducts);
     checkBackendHealth().then(setSystemHealth);
     fetchSavedLooks().then(setSavedLooks);
-    fetchHistory().then(setHistory);
+    refreshHistory();
   }, []);
 
   const handleGenerate = async (payload: RecommendRequest) => {
@@ -59,8 +65,23 @@ export const App: React.FC = () => {
     try {
       const res = await recommendLooks(payload);
       setLookResponse(res);
-      // Refresh history
-      fetchHistory().then(setHistory);
+      
+      // Explicitly guarantee history log
+      await recordHistoryEntry({
+        type: 'look_generation',
+        title: `Gemma Look Generation: ${payload.occasion}`,
+        summary: `Synthesized ${res.looks.length} bespoke looks for ${payload.outfit_attributes.dominant_color} outfit (${payload.user_profile.preferred_style} style).`,
+        details: {
+          occasion: payload.occasion,
+          dominant_color: payload.outfit_attributes.dominant_color,
+          secondary_color: payload.outfit_attributes.secondary_color,
+          style: payload.user_profile.preferred_style,
+          intensity: payload.user_profile.preferred_intensity,
+          looks_count: res.looks.length
+        }
+      });
+      await refreshHistory();
+
       // Auto-scroll to results
       setTimeout(() => {
         const resultsEl = document.getElementById('look-results');
@@ -81,10 +102,23 @@ export const App: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleApplyFaceProfile = (profile: FaceProfile, analysis: FaceAnalysisResult) => {
+  const handleApplyFaceProfile = async (profile: FaceProfile, analysis: FaceAnalysisResult) => {
     setFaceProfile(profile);
     setLastFaceAnalysis(analysis);
-    fetchHistory().then(setHistory);
+    await recordHistoryEntry({
+      type: 'face_analysis',
+      title: `Facial Scan: ${analysis.face_shape} Shape`,
+      summary: `Detected ${analysis.face_shape} shape (${(analysis.face_shape_confidence * 100).toFixed(0)}% confidence) with ${analysis.skin_undertone} undertone (${analysis.skin_hex}).`,
+      details: {
+        face_shape: analysis.face_shape,
+        skin_tone: analysis.skin_tone,
+        skin_undertone: analysis.skin_undertone,
+        skin_hex: analysis.skin_hex,
+        ita_score: analysis.ita_score,
+        symmetry_score: analysis.symmetry_score
+      }
+    });
+    await refreshHistory();
   };
 
   const handleSaveLook = async (look: LookOption) => {
@@ -96,7 +130,17 @@ export const App: React.FC = () => {
     };
     const saved = await saveLookToBackend(item);
     setSavedLooks(prev => [saved, ...prev.filter(l => l.id !== saved.id)]);
-    fetchHistory().then(setHistory);
+    await recordHistoryEntry({
+      type: 'look_saved',
+      title: `Saved Look: ${look.name}`,
+      summary: `Saved '${look.name}' (${look.makeup.lips}) into personal beauty vault.`,
+      details: {
+        look_id: look.id,
+        look_name: look.name,
+        intensity: look.intensity
+      }
+    });
+    await refreshHistory();
   };
 
   const handleDeleteSavedLook = async (id: string) => {

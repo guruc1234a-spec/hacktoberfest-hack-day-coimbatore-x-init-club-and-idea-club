@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import { FaceMesh, Results } from '@mediapipe/face_mesh';
 import { LookOption, TutorialStep } from '../types';
+import { recordHistoryEntry } from '../services/api';
 import { 
   CheckCircle2, 
   ChevronLeft, 
@@ -280,8 +281,12 @@ export const CameraCoachCanvas: React.FC<CameraCoachProps> = ({ look, onExit }) 
       }
 
     } else if (region === 'lips') {
-      const lipOuter = [61, 185, 40, 39, 37, 0, 267, 269, 270, 409, 291, 146, 91, 181, 84, 17];
-      ctx.fillStyle = 'rgba(244, 63, 94, 0.45)';
+      // Correct MediaPipe perimeter lip loop (upper outer -> lower outer clockwise continuous)
+      const lipOuter = [61, 185, 40, 39, 37, 0, 267, 269, 270, 409, 291, 375, 321, 405, 314, 17, 84, 181, 91, 146, 61];
+      const cupidsBow = [39, 37, 0, 267, 269];
+      const lowerVermilion = [91, 181, 84, 17, 314, 405, 321];
+
+      ctx.fillStyle = 'rgba(244, 63, 94, 0.42)';
       ctx.strokeStyle = '#fb7185';
       ctx.lineWidth = 2.5;
 
@@ -294,6 +299,30 @@ export const CameraCoachCanvas: React.FC<CameraCoachProps> = ({ look, onExit }) 
       });
       ctx.closePath();
       ctx.fill();
+      ctx.stroke();
+
+      // Cupid's bow highlight definition
+      ctx.strokeStyle = '#ffe4e6';
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      cupidsBow.forEach((idx, i) => {
+        const pt = landmarks[idx];
+        if (!pt) return;
+        if (i === 0) ctx.moveTo(getX(pt), getY(pt));
+        else ctx.lineTo(getX(pt), getY(pt));
+      });
+      ctx.stroke();
+
+      // Lower lip contour accent
+      ctx.strokeStyle = '#fda4af';
+      ctx.lineWidth = 2.5;
+      ctx.beginPath();
+      lowerVermilion.forEach((idx, i) => {
+        const pt = landmarks[idx];
+        if (!pt) return;
+        if (i === 0) ctx.moveTo(getX(pt), getY(pt));
+        else ctx.lineTo(getX(pt), getY(pt));
+      });
       ctx.stroke();
 
     } else if (region === 'eyelid') {
@@ -403,6 +432,17 @@ export const CameraCoachCanvas: React.FC<CameraCoachProps> = ({ look, onExit }) 
         setCompletedSteps(prev => [...prev, currentStep.step]);
       }
       setIsFinished(true);
+      recordHistoryEntry({
+        type: 'coach_session',
+        title: `AR Coaching Session: ${look.name}`,
+        summary: `Completed all ${look.tutorial_steps.length} interactive AR tutorial steps for ${look.name}.`,
+        details: {
+          look_id: look.id,
+          look_name: look.name,
+          completed_steps: look.tutorial_steps.length,
+          intensity: look.intensity
+        }
+      });
       confetti({
         particleCount: 120,
         spread: 70,

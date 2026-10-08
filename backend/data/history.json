@@ -4,6 +4,65 @@
     "title": "Saved Look: Test Evening Glam",
     "summary": "Saved look 'Test Evening Glam' to personal beauty vault.",
     "details": {
+      "saved_look_id": "saved-540fe59e",
+      "look_name": "Test Glam Look"
+    },
+    "id": "hist-b048364d",
+    "timestamp": "2026-10-08T08:55:26.440279+00:00"
+  },
+  {
+    "type": "face_analysis",
+    "title": "OpenCV Facial Scan: Square Shape",
+    "summary": "Detected Square morphology with Warm (Golden / Peachy) undertone (#dbaf8c).",
+    "details": {
+      "face_shape": "Square",
+      "skin_tone": "Fair / Light",
+      "skin_undertone": "Warm (Golden / Peachy)",
+      "skin_hex": "#dbaf8c",
+      "ita_score": 45.6,
+      "symmetry_score": 94.0
+    },
+    "id": "hist-044bbbb4",
+    "timestamp": "2026-10-08T08:55:26.418296+00:00"
+  },
+  {
+    "type": "look_generation",
+    "title": "Look Generation: Reception Gala",
+    "summary": "Created 3 Gemma 4 looks for #801235 palette and Elegant style.",
+    "details": {
+      "occasion": "Reception Gala",
+      "style": "Elegant",
+      "intensity": "Moderate",
+      "dominant_color": "#801235",
+      "secondary_color": "#b38747",
+      "looks_count": 3
+    },
+    "id": "hist-e5fe1d53",
+    "timestamp": "2026-10-08T08:55:26.285604+00:00"
+  },
+  {
+    "type": "outfit_analysis",
+    "title": "Outfit Analysis: Bold / Festive",
+    "summary": "Extracted dominant tone #b5274f and secondary accent #b5274f.",
+    "details": {
+      "dominant_color": "#b5274f",
+      "secondary_color": "#b5274f",
+      "style": "Bold / Festive",
+      "formality": "High",
+      "palette": [
+        "#b5274f",
+        "#b5274f",
+        "#b5274f"
+      ]
+    },
+    "id": "hist-a7f812e5",
+    "timestamp": "2026-10-08T08:55:24.983904+00:00"
+  },
+  {
+    "type": "look_saved",
+    "title": "Saved Look: Test Evening Glam",
+    "summary": "Saved look 'Test Evening Glam' to personal beauty vault.",
+    "details": {
       "saved_look_id": "saved-e22f16d8",
       "look_name": "Test Glam Look"
     },
