@@ -242,21 +242,10 @@ export const FaceAnalyzerModal: React.FC<FaceAnalyzerModalProps> = ({
     }
   };
 
-  const handleSelectPreset = async (preset: typeof PRESET_FACES[0]) => {
+  const handleSelectPreset = (preset: typeof PRESET_FACES[0]) => {
     setImagePreview(preset.image);
     stopCamera();
-    setIsAnalyzing(true);
-    try {
-      const res = await fetch(preset.image);
-      const blob = await res.blob();
-      const result = await analyzeFace(blob);
-      setAnalysisResult(result);
-    } catch (err) {
-      console.warn("Using preset fallback:", err);
-      setAnalysisResult(preset.fallback);
-    } finally {
-      setIsAnalyzing(false);
-    }
+    setAnalysisResult(preset.fallback);
   };
 
   const handleCopyHex = (hex: string) => {
