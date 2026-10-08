@@ -1,5 +1,213 @@
 [
   {
+    "type": "face_analysis",
+    "title": "OpenCV Facial Scan: Oval Shape",
+    "summary": "Detected Oval morphology with Cool (Rosy / Berry) undertone (#3c2722).",
+    "details": {
+      "face_shape": "Oval",
+      "skin_tone": "Deep / Rich Espresso",
+      "skin_undertone": "Cool (Rosy / Berry)",
+      "skin_hex": "#3c2722",
+      "ita_score": -77.6,
+      "symmetry_score": 97.9
+    },
+    "id": "hist-2ac3acba",
+    "timestamp": "2026-10-08T12:08:25.159485+00:00"
+  },
+  {
+    "type": "outfit_analysis",
+    "title": "Outfit Analysis: Modern / Contemporary",
+    "summary": "Extracted dominant tone #c0baac and secondary accent #7b715d.",
+    "details": {
+      "dominant_color": "#c0baac",
+      "secondary_color": "#7b715d",
+      "style": "Modern / Contemporary",
+      "formality": "Moderate",
+      "palette": [
+        "#c0baac",
+        "#7b715d",
+        "#211e18"
+      ]
+    },
+    "id": "hist-dae1d143",
+    "timestamp": "2026-10-08T10:31:41.422583+00:00"
+  },
+  {
+    "id": "hist-1791455478561-58pw",
+    "type": "coach_session",
+    "timestamp": "2026-10-08T10:31:18.561Z",
+    "title": "AR Coaching Session: Bespoke Oval Radiant Aura",
+    "summary": "Completed all 6 interactive AR tutorial steps for Bespoke Oval Radiant Aura.",
+    "details": {
+      "look_id": "look-2-recommended",
+      "look_name": "Bespoke Oval Radiant Aura",
+      "completed_steps": 6,
+      "intensity": 7
+    }
+  },
+  {
+    "id": "hist-1791455452675-0s6h",
+    "type": "coach_session",
+    "timestamp": "2026-10-08T10:30:52.675Z",
+    "title": "AR Coaching Session: Bespoke Oval Radiant Aura",
+    "summary": "Completed all 6 interactive AR tutorial steps for Bespoke Oval Radiant Aura.",
+    "details": {
+      "look_id": "look-2-recommended",
+      "look_name": "Bespoke Oval Radiant Aura",
+      "completed_steps": 6,
+      "intensity": 7
+    }
+  },
+  {
+    "id": "hist-1791455368935-nsaf",
+    "type": "look_generation",
+    "timestamp": "2026-10-08T10:29:28.935Z",
+    "title": "Gemma Look Generation: Engagement Ceremony",
+    "summary": "Synthesized 3 bespoke looks for #801235 outfit (Minimal style).",
+    "details": {
+      "occasion": "Engagement Ceremony",
+      "dominant_color": "#801235",
+      "secondary_color": "#d9a566",
+      "style": "Minimal",
+      "intensity": "Natural",
+      "looks_count": 3
+    }
+  },
+  {
+    "type": "look_generation",
+    "title": "Look Generation: Engagement Ceremony",
+    "summary": "Created 3 Gemma 4 looks for #801235 palette and Minimal style.",
+    "details": {
+      "occasion": "Engagement Ceremony",
+      "style": "Minimal",
+      "intensity": "Natural",
+      "dominant_color": "#801235",
+      "secondary_color": "#d9a566",
+      "looks_count": 3
+    },
+    "id": "hist-f67d51be",
+    "timestamp": "2026-10-08T10:29:28.930267+00:00"
+  },
+  {
+    "id": "hist-1791455325684-rlbf",
+    "type": "face_analysis",
+    "timestamp": "2026-10-08T10:28:45.684Z",
+    "title": "Facial Scan: Oval Shape",
+    "summary": "Detected Oval shape (95% confidence) with Cool (Rosy / Berry) undertone (#a88782).",
+    "details": {
+      "face_shape": "Oval",
+      "skin_tone": "Fair / Light",
+      "skin_undertone": "Cool (Rosy / Berry)",
+      "skin_hex": "#a88782",
+      "ita_score": 52.8,
+      "symmetry_score": 96
+    }
+  },
+  {
+    "type": "face_analysis",
+    "title": "OpenCV Facial Scan: Oval Shape",
+    "summary": "Detected Oval morphology with Cool (Rosy / Berry) undertone (#a88782).",
+    "details": {
+      "face_shape": "Oval",
+      "skin_tone": "Fair / Light",
+      "skin_undertone": "Cool (Rosy / Berry)",
+      "skin_hex": "#a88782",
+      "ita_score": 52.8,
+      "symmetry_score": 96.0
+    },
+    "id": "hist-5834b082",
+    "timestamp": "2026-10-08T10:28:19.079871+00:00"
+  },
+  {
+    "id": "hist-1791455139293-f37p",
+    "type": "look_generation",
+    "timestamp": "2026-10-08T10:25:39.293Z",
+    "title": "Gemma Look Generation: Wedding Reception / Formal Evening",
+    "summary": "Synthesized 3 bespoke looks for #801235 outfit (Traditional style).",
+    "details": {
+      "occasion": "Wedding Reception / Formal Evening",
+      "dominant_color": "#801235",
+      "secondary_color": "#d9a566",
+      "style": "Traditional",
+      "intensity": "Moderate",
+      "looks_count": 3
+    }
+  },
+  {
+    "type": "look_generation",
+    "title": "Look Generation: Wedding Reception / Formal Evening",
+    "summary": "Created 3 Gemma 4 looks for #801235 palette and Traditional style.",
+    "details": {
+      "occasion": "Wedding Reception / Formal Evening",
+      "style": "Traditional",
+      "intensity": "Moderate",
+      "dominant_color": "#801235",
+      "secondary_color": "#d9a566",
+      "looks_count": 3
+    },
+    "id": "hist-5362fae1",
+    "timestamp": "2026-10-08T10:25:39.287714+00:00"
+  },
+  {
+    "type": "look_saved",
+    "title": "Saved Look: Test Evening Glam",
+    "summary": "Saved look 'Test Evening Glam' to personal beauty vault.",
+    "details": {
+      "saved_look_id": "saved-56dc5c4c",
+      "look_name": "Test Glam Look"
+    },
+    "id": "hist-dd053f41",
+    "timestamp": "2026-10-08T10:20:31.244970+00:00"
+  },
+  {
+    "type": "face_analysis",
+    "title": "OpenCV Facial Scan: Square Shape",
+    "summary": "Detected Square morphology with Warm (Golden / Peachy) undertone (#dbaf8c).",
+    "details": {
+      "face_shape": "Square",
+      "skin_tone": "Fair / Light",
+      "skin_undertone": "Warm (Golden / Peachy)",
+      "skin_hex": "#dbaf8c",
+      "ita_score": 45.6,
+      "symmetry_score": 94.0
+    },
+    "id": "hist-279594e7",
+    "timestamp": "2026-10-08T10:20:31.220250+00:00"
+  },
+  {
+    "type": "look_generation",
+    "title": "Look Generation: Reception Gala",
+    "summary": "Created 3 Gemma 4 looks for #801235 palette and Elegant style.",
+    "details": {
+      "occasion": "Reception Gala",
+      "style": "Elegant",
+      "intensity": "Moderate",
+      "dominant_color": "#801235",
+      "secondary_color": "#b38747",
+      "looks_count": 3
+    },
+    "id": "hist-d772cf6f",
+    "timestamp": "2026-10-08T10:20:31.086568+00:00"
+  },
+  {
+    "type": "outfit_analysis",
+    "title": "Outfit Analysis: Bold / Festive",
+    "summary": "Extracted dominant tone #b5274f and secondary accent #b5274f.",
+    "details": {
+      "dominant_color": "#b5274f",
+      "secondary_color": "#b5274f",
+      "style": "Bold / Festive",
+      "formality": "High",
+      "palette": [
+        "#b5274f",
+        "#b5274f",
+        "#b5274f"
+      ]
+    },
+    "id": "hist-78ccd1ed",
+    "timestamp": "2026-10-08T10:20:30.467610+00:00"
+  },
+  {
     "id": "hist-1791452603870-56no",
     "type": "coach_session",
     "timestamp": "2026-10-08T09:43:23.870Z",
