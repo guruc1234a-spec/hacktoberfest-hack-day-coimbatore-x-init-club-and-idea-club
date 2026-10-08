@@ -123,9 +123,9 @@ The submitted application is functional and accessible through the link above. U
 
 ## Demo Video
 
-**Demo Video:** [Video URL]
+**Demo Video:** [GlamSync AI Demo Video](https://youtu.be/WVJn0bj-v3U)
 
-[Provide a short demonstration of the working project, covering the main user flow and important functionality.]
+Interactive demonstration of GlamSync AI showing outfit chromatic analysis, OpenCV YuNet face shape & ITA skin undertone detection, Gemma 4 multimodal look generation, and real-time MediaPipe AR camera coach mirror.
 
 ## Open Source and AI Usage
 
